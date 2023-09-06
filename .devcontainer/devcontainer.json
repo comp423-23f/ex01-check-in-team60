@@ -1,0 +1,17 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "workspaceFolder": "/workspace",
+    "service": "httpd",
+    "remoteUser": "vscode",
+    "forwardPorts": [80, 443, 4200, 8080],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "angular.ng-template",
+                "GitHub.vscode-pull-request-github",
+                "ms-azuretools.vscode-docker",
+                "matthewpi.caddyfile-support"
+            ]
+        }
+    }
+}
