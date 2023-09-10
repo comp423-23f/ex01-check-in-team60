@@ -1,0 +1,14 @@
+<a [title]="'Home'" [routerLink]="''" style="text-decoration: none; color: black;">
+    <h1> CSXL Check-In System </h1>
+</a>
+
+<h2>Registered Users</h2>
+
+<div *ngFor="let user of users">
+    
+    <span>{{ user.getFN() }}</span>
+    <span>{{ user.getLN() }}</span>
+    <span>{{ user.getPID() }}</span>
+
+</div>
+

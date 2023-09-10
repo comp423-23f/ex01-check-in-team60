@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
+    StatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'stats', component: StatsComponent },
     ])
   ],
   providers: [],
