@@ -4,11 +4,21 @@
 
 <h2>Registered Users</h2>
 
-<div *ngFor="let user of users">
-    
-    <span>{{ user.getFN() }}</span>
-    <span>{{ user.getLN() }}</span>
-    <span>{{ user.getPID() }}</span>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>|</th>
+            <th>PID</th>
+        </tr>
+    </thead>
 
-</div>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.getLN() }}, {{ user.getFN() }}</td>
+            <td>|</td>
+            <td>{{ user.getPID() }}</td>
+        </tr>
+    </tbody>
 
+</table>
