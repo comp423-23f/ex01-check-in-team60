@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { CheckIn } from './check-in';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,20 @@ import { User } from './user';
 export class RegisterService {
   
   private users: User[] = [];
+  private checkIns: CheckIn[] = [];
+
+  checkInUser(user: User) : void {
+    this.checkIns.push(new CheckIn(user, new Date()));
+    console.warn("User " + user.getFN() + " " + user.getLN() + " has checked in at " + (new Date()).toLocaleTimeString());
+    // this.checkIns.sort((checkInA, checkInB) => checkInA.getDate().getTime() - checkInB.getDate().getTime());
+  }
 
   registerUser(user: User) {
     this.users.push(user);
+  }
+
+  getCheckIns(): CheckIn[] {
+    return this.checkIns.slice();
   }
 
   getUsers() : User[] {

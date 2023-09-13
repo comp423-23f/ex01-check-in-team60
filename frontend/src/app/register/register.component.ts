@@ -24,7 +24,7 @@ export class RegisterComponent {
   });
 
   onSubmit(): void {
-    console.warn('Values: ', this.registerForm.value);
+    // console.warn('Values: ', this.registerForm.value);
     let fn = this.registerForm.value.firstName;
     let ln = this.registerForm.value.lastName;
     let pid = this.registerForm.value.pid;
