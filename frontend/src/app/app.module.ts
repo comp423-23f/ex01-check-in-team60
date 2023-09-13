@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { StatsComponent } from './stats/stats.component';
+import { CheckInComponent } from './check-in/check-in.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { StatsComponent } from './stats/stats.component';
     HomeComponent,
     RegisterComponent,
     StatsComponent,
+    CheckInComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { StatsComponent } from './stats/stats.component';
       { path: '', component: HomeComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'stats', component: StatsComponent },
+      { path: 'checkin', component: CheckInComponent },
     ])
   ],
   providers: [],

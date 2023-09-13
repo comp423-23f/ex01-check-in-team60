@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { User } from '../user';
-import { UserService } from '../user.service';
+import { RegisterService } from '../register.service';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ export class RegisterComponent {
 
   constructor(private formBuilder: FormBuilder, 
     private route: ActivatedRoute, 
-    private userService: UserService) {
+    private registerService: RegisterService) {
   }
 
   registerForm = this.formBuilder.group({
@@ -39,10 +39,14 @@ export class RegisterComponent {
 
       window.alert('PID must be numerical.')
 
-    } else {
+    } else if ((+pid).toString().length != 9) {
+
+      window.alert('PID must have 9 digits.');
+    
+    }  else {
 
       let user = new User(fn, ln, pid);
-      this.userService.registerUser(user);
+      this.registerService.registerUser(user);
       window.alert('Thank you ' + user.getFN() + ' ' + user.getLN() + '! Please click the header to return home.');
       this.registerForm.reset();
 
