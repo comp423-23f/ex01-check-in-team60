@@ -23,3 +23,25 @@
     </tbody>
 
 </table>
+
+<h2>Checked In Users</h2>
+
+<table>
+    
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>|</th>
+            <th>Date and Time</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let checkIn of checkIns">
+            <td>{{ checkIn.getUser().getLN() }}, {{ checkIn.getUser().getFN() }}</td>
+            <td>|</td>
+            <td>{{ checkIn.getDate().toLocaleString() }}</td>
+        </tr>
+    </tbody>
+
+</table>

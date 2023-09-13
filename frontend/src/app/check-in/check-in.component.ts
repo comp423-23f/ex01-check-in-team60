@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { CheckInService } from '../check-in.service';
 import { FormBuilder } from '@angular/forms';
+import { User } from '../user';
 
 @Component({
   selector: 'app-check-in',
@@ -44,7 +45,8 @@ export class CheckInComponent {
     } else {
 
       let name = this.checkInService.getNameFromPID(pid);
-      
+      let user = this.checkInService.getUserFromPID(pid);
+      this.checkInService.checkInUser(user !== undefined ? user : new User("NULL", "NULL", "000000000"));
       window.alert(name + ' is checked in.');
       this.registerForm.reset();
 
