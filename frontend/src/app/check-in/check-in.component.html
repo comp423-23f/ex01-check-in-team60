@@ -1,1 +1,19 @@
-<p>check-in works!</p>
+<a [title]="'Home'" [routerLink]="''" style="text-decoration: none; color: black;">
+    <h1> CSXL Check-In System </h1>
+</a>
+
+<h2>Check In User</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <table>
+
+        <tr>
+            <td><label for="pid">PID</label></td>
+            <td><input id="pid" type="text" formControlName="pid"></td>
+        </tr>
+
+    </table>
+
+    <button style="font-size: large;">Check In</button>
+
+</form>

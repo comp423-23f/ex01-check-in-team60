@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { UserService } from '../user.service';
+import { RegisterService } from '../register.service';
 
 @Component({
   selector: 'app-stats',
@@ -9,8 +9,8 @@ import { UserService } from '../user.service';
 })
 export class StatsComponent {
 
-  users = this.userService.getUsers();
+  users = this.registerService.getUsers();
   
-  constructor(private userService: UserService) {}
+  constructor(private registerService: RegisterService) {}
 
 }
