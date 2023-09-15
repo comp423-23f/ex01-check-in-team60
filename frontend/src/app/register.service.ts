@@ -12,7 +12,7 @@ export class RegisterService {
 
   checkInUser(user: User) : void {
     this.checkIns.push(new CheckIn(user, new Date()));
-    console.warn("User " + user.getFN() + " " + user.getLN() + " has checked in at " + (new Date()).toLocaleTimeString());
+    // console.warn("User " + user.getFN() + " " + user.getLN() + " has checked in at " + (new Date()).toLocaleTimeString());
     // this.checkIns.sort((checkInA, checkInB) => checkInA.getDate().getTime() - checkInB.getDate().getTime());
   }
 
